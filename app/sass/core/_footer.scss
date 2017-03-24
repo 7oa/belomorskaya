@@ -1,0 +1,22 @@
+.footer{
+  flex: 0 0 auto;
+  color: $c_main;
+  width: 100%;
+  height: 100px;
+}
+.copyright{
+  font-family: "PlayfairDisplaySC";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 100px;
+  float: left;
+}
+.developers{
+  background: url(images/f5-logo.png) no-repeat;
+  width: 209px;
+  height: 43px;
+  display: block;
+  float: right;
+  margin-top: 35px;
+}

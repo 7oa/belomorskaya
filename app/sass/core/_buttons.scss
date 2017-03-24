@@ -1,0 +1,43 @@
+.button-call-request{
+  display: inline-block;
+  background: $c_violet;
+  color: $white;
+  font: 13px/50px "OpenSans";
+  padding: 0 30px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: .5s;
+  &:hover{
+    box-shadow: 10px 17.3px 60px rgba(54, 83, 116, 0.4);
+    background: $c_button_blue_hover;
+  }
+}
+.button-reserv{
+  display: inline-block;
+  background: $c_orange;
+  color: $white;
+  font: 13px/70px "OpenSans";
+  padding: 0 50px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: .5s;
+  &:hover{
+    box-shadow: 10px 17.3px 60px rgba(251, 141, 5, 0.4);
+    background: $c_button_orange_hover;
+  }
+}
+.button-showmore{
+  display: inline-block;
+  font: 13px/50px "OpenSansSemiBold";
+  text-transform: uppercase;
+  border: 2px solid $c_orange2;
+  border-radius: 3px;
+  color: $c_orange2;
+  padding: 0 50px;
+  transition: .5s;
+  &:hover{
+    background-color: $c_orange;
+    color: $white;
+    border-color: $c_orange;
+  }
+}

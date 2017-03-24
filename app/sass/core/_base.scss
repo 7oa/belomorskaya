@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+  background: url(images/footer-bg.jpg) $white;
+}
+.wrapper{
+  font-family: "OpenSans";
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.container{
+  width: 1260px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: $c_violet;
+}
+.yellow-bg{
+  background: url(images/yellow-bg.jpg);
+}

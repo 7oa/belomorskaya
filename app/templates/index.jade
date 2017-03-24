@@ -1,0 +1,97 @@
+extends core/_template
+
+block title
+	title Главная
+
+block content
+	//workarea
+	.workarea
+		//fullsize-img
+		.fullsize-img
+			.fullsize-img__bg
+				img(src="images/hotel-bg.jpg")
+			.fullsize-img__content
+				.fullsize-img__city Архангельск
+				.fullsize-img__ttl Гостиница<br>Беломорская
+				.fullsize-img__desc В лучших традициях северного гостеприимства
+		//end fullsize-img
+
+		.yellow-bg
+			//reserv-small
+			.reserv-small
+				.reserv-small-parametrs-item
+					.reserv-small-parametrs-item__content
+						.reserv-small-parametrs-item__ttl Дата заезда
+						.select-date
+							.label-date-first
+								span.dd 10
+								span.mm февраля
+							input.select-date-input#js-firstDate(type="text")
+				.reserv-small-parametrs-item
+					.reserv-small-parametrs-item__content
+						.reserv-small-parametrs-item__ttl Дата выезда
+						.select-date
+							.label-date-first
+								span.dd 15
+								span.mm aпреля
+							input.select-date-input#js-secondDate(type="text")
+				.reserv-small-parametrs-item
+					.reserv-small-parametrs-item__content
+						.reserv-small-parametrs-item__ttl Количество гостей
+						.select-guest-wrapper
+							.select-guest-wrapper__count 1
+							input.select-guest-input(type="text")
+							.select-guest-wrapper__plus
+							.select-guest-wrapper__minus
+				.reserv-small-parametrs-item.reserv-small-button-wrapper
+					a(class="button-reserv js-reserv" href="#") Забронировать
+			//end reserv-small
+
+			//rooms-wrapper
+			.rooms-wrapper
+				.rooms
+					.room-wrapper.room-wrapper-size1
+						.room.room_size_1
+						.room.room_size_1
+					.room-wrapper.room-wrapper-size2
+						.room.room_size_2
+						.room.room_size_2
+					.room-wrapper.room-wrapper-size4
+						.room.room_size_4
+					.room-wrapper.room-wrapper-size1
+						.room.room_size_1
+						.room.room_size_1
+			//end rooms-wrapper
+
+			//slider
+			.special-offers-wrapper
+				.container
+					.special-offers-wrapper-ttl Спецпредложения
+					.special-offers-swiper-container
+						.swiper-wrapper
+							+slide()
+							+slide()
+							+slide()
+					.special-offers-swiper-pagination
+					.special-offers-swiper-button-next
+					.special-offers-swiper-button-prev
+
+
+			//end slider
+
+			//map
+			.yandex-map-wrapper
+				#map
+				.container
+					.map-label
+						.map-label__content
+							.map-label__ttl Контакты
+							.map-label__items
+								.map-label__item.map-label__item_point 163 000, Росcия г. Архангельск, ул. Тимме, д.3
+								.map-label__item.map-label__item_tel (8182) 66-16-00<br/>66-14-34
+								.map-label__item.map-label__item_mail
+									a(href="mailto:belhotel@list.ru") belhotel@list.ru
+						.map-label__button-wrapper
+								a(class="button-call-request js-open-callback" href="#") Заказать звонок
+			//end map
+	//end workarea

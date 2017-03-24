@@ -1,0 +1,14 @@
+@include font-face(OpenSans, fonts/OpenSansRegular/OpenSansRegular, normal);
+@include font-face(OpenSans, fonts/OpenSansItalic/OpenSansItalic, normal, italic);
+@include font-face(OpenSans, fonts/OpenSansBold/OpenSansBold, bold);
+@include font-face(OpenSans, fonts/OpenSansBoldItalic/OpenSansBoldItalic, bold, italic);
+@include font-face(OpenSansLight, fonts/OpenSansLight/OpenSansLight, normal);
+@include font-face(OpenSansExtraBold, fonts/OpenSansExtraBold/OpenSansExtraBold, normal);
+@include font-face(OpenSansExtraBoldItalic, fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic, normal);
+@include font-face(OpenSansSemiBold, fonts/OpenSansSemiBold/OpenSans-Semibold, normal);
+
+@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCRegular/PlayfairDisplaySCRegular, normal);
+@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCBold/PlayfairDisplaySCBold, bold);
+@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCItalic/PlayfairDisplaySCItalic, normal, italic);
+@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCBoldItalic/PlayfairDisplaySCBoldItalic, bold, italic);
+@include font-face(PlayfairDisplaySCBlack, fonts/PlayfairDisplaySCBlack/PlayfairDisplaySC-Black, normal);
