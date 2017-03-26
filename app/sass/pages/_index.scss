@@ -4,13 +4,11 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  &__bg{
     img{
       min-width: 100%;
       min-height: 100%;
       width: 100%;
     }
-  }
   &__content{
     color: $white;
     text-align: center;
@@ -36,8 +34,16 @@
 
 .special-offers-wrapper{
   background: $white;
-  height: 700px;
   position: relative;
+  padding-top: 87px;
+  padding-bottom: 20px;
+  &-ttl{
+    font: 15px/15px "OpenSansSemiBold";
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c_blocks;
+  }
 }
 .yandex-map-wrapper{
   height: 700px;
@@ -115,6 +121,12 @@
   background: $black;
   border-radius: 3px;
   margin: 0 17px 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
   &_size_1{
     width: 390px;
     height: 180px;
@@ -130,5 +142,52 @@
   }
   &-wrapper{
     float: left;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+  }
+  &__ttl{
+    color: $white;
+    position: relative;
+    font: 33px/33px "PlayfairDisplaySC";
+    font-weight: bold;
+  }
+  &__hover{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $white;
+    transition: .5s;
+    padding: 25px 35px 20px;
+    &-ttl{
+      font: 19px/30px "PlayfairDisplaySC";
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $c_main;
+      text-transform: uppercase;
+    }
+    &-text{
+      font: 14px/23px "OpenSans";
+      color: $c_blue_text;
+      margin-bottom: 10px;
+    }
+    &-link{
+      color: $c_orange_link;
+      text-transform: uppercase;
+      font: 13px/25px "OpenSans";
+    }
+  }
+  &:hover{
+    .room__hover{
+      opacity: 1;
+    }
   }
 }

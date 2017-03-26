@@ -1,5 +1,8 @@
 extends core/_template
 
+append sharedVars
+	- var activeMenu = 'Главная';
+
 block title
 	title Главная
 
@@ -8,8 +11,7 @@ block content
 	.workarea
 		//fullsize-img
 		.fullsize-img
-			.fullsize-img__bg
-				img(src="images/hotel-bg.jpg")
+			img(src="images/hotel-bg.jpg")
 			.fullsize-img__content
 				.fullsize-img__city Архангельск
 				.fullsize-img__ttl Гостиница<br>Беломорская
@@ -18,49 +20,54 @@ block content
 
 		.yellow-bg
 			//reserv-small
-			.reserv-small
-				.reserv-small-parametrs-item
-					.reserv-small-parametrs-item__content
-						.reserv-small-parametrs-item__ttl Дата заезда
-						.select-date
-							.label-date-first
-								span.dd 10
-								span.mm февраля
-							input.select-date-input#js-firstDate(type="text")
-				.reserv-small-parametrs-item
-					.reserv-small-parametrs-item__content
-						.reserv-small-parametrs-item__ttl Дата выезда
-						.select-date
-							.label-date-first
-								span.dd 15
-								span.mm aпреля
-							input.select-date-input#js-secondDate(type="text")
-				.reserv-small-parametrs-item
-					.reserv-small-parametrs-item__content
-						.reserv-small-parametrs-item__ttl Количество гостей
-						.select-guest-wrapper
-							.select-guest-wrapper__count 1
-							input.select-guest-input(type="text")
-							.select-guest-wrapper__plus
-							.select-guest-wrapper__minus
-				.reserv-small-parametrs-item.reserv-small-button-wrapper
-					a(class="button-reserv js-reserv" href="#") Забронировать
+			form.reserv-small
+				.row
+					.col-xs-3
+						.reserv-small-parametrs-item
+							.reserv-small-parametrs-item__content
+								.reserv-small-parametrs-item__ttl Дата заезда
+								.select-date
+									.label-date-first#formatDate
+										span.dd 10
+										span.mm февраля
+									input.select-date-input#js-firstDate(type="text")
+					.col-xs-3
+						.reserv-small-parametrs-item
+							.reserv-small-parametrs-item__content
+								.reserv-small-parametrs-item__ttl Дата выезда
+								.select-date
+									.label-date-first
+										span.dd 15
+										span.mm aпреля
+									input.select-date-input#js-secondDate(type="text")
+					.col-xs-3
+						.reserv-small-parametrs-item
+							.reserv-small-parametrs-item__content
+								.reserv-small-parametrs-item__ttl Количество гостей
+								.select-guest-wrapper
+									.select-guest-wrapper__count.js-count 1
+									input.select-guest-input.js-count-input(type="text" value="1")
+									.select-guest-wrapper__plus.js-plus
+									.select-guest-wrapper__minus.js-minus
+					.col-xs-3
+						.reserv-small-parametrs-item.reserv-small-button-wrapper
+							a(class="button-reserv js-reserv" href="#") Забронировать
 			//end reserv-small
 
 			//rooms-wrapper
 			.rooms-wrapper
 				.rooms
 					.room-wrapper.room-wrapper-size1
-						.room.room_size_1
-						.room.room_size_1
+						+room("Хостел", "room-1.jpg", "1")
+						+room("Специальный", "room-2.jpg", "1")
 					.room-wrapper.room-wrapper-size2
-						.room.room_size_2
-						.room.room_size_2
+						+room("Двухместный", "room-3.jpg", "2")
+						+room("Одноместный", "room-4.jpg", "2")
 					.room-wrapper.room-wrapper-size4
-						.room.room_size_4
+						+room("Люкс улучшенный", "room-5.jpg", "4")
 					.room-wrapper.room-wrapper-size1
-						.room.room_size_1
-						.room.room_size_1
+						+room("Люкс стендарт", "room-6.jpg", "1")
+						+room("Полулюкс", "room-7.jpg", "1")
 			//end rooms-wrapper
 
 			//slider

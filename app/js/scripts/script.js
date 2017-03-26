@@ -13,8 +13,11 @@ $(document).ready(function() {
 
     // выбор дат
     $('.select-date-input').datepicker({
-        altField: ".label-date-first",
-        altFormat: "DD MM"
+        dateFormat: "d MM",
+        autoClose: true,
+        language: {
+            months: ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря']
+        }
     });
 
     // masonry
@@ -23,4 +26,22 @@ $(document).ready(function() {
     //     gutter: 5,
     //     columnWidth: 390,
     // });
-});
+
+    //кол-во гостей
+    $(".js-plus").click(function () {
+        var count_el = $(this).parent().children(".js-count");
+        var count_input = $(this).parent().children(".js-count-input");
+        var count_num = parseInt(count_el.text());
+        count_el.html(count_num+1);
+        count_input.val(count_num+1);
+    });
+    $(".js-minus").click(function () {
+        var count_el = $(this).parent().children(".js-count");
+        var count_input = $(this).parent().children(".js-count-input");
+        var count_num = parseInt(count_el.text());
+        if(count_num>1) {
+            count_el.html(count_num-1);
+            count_input.val(count_num-1);
+        }
+    });
+})

@@ -66,7 +66,6 @@
     display: flex;
     justify-content: space-between;
     &__items{
-
     }
     &__links{
         color: $c_blocks;
@@ -75,6 +74,7 @@
         transition: .5s;
         &:hover{
             color: $c_orange;
+            font-weight: bold;
         }
         &_active{
             color: $c_orange;

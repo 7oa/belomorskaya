@@ -1,31 +1,17 @@
-.special-offers-wrapper{
-  padding-top: 87px;
-  padding-bottom: 20px;
-  &-ttl{
-    font: 15px/15px "OpenSansSemiBold";
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    text-align: center;
-    color: $c_blocks;
-  }
-}
 .special-offers-swiper-container{
   width: 100%;
   overflow: hidden;
   margin-bottom: 30px;
   &__item{
-    display: flex;
   }
   &__img{
-    border: 1px solid $c_border_grey;
-    border-radius: 3px;
-    margin-right: 60px;
-    line-height: 0;
-    background: $white;
     img{
       width: 530px;
       height: 400px;
       padding: 15px;
+      border: 1px solid $c_border_grey;
+      border-radius: 3px;
+      background: $white;
     }
   }
   &__content{

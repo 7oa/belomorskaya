@@ -13,8 +13,6 @@ header.header
 						a(class="button-call-request js-open-callback" href="#") Заказать звонок
 				.header-menu-wrapper
 					ul.header-menu
-						- var nav = ["Главная", "Номера", "Ресторан", "Конференц-зал", "Информация", "Контакты"]
-						each item in nav
-							li.header-menu__items
-								a(class="header-menu__links" href="#")= item
+						each i in nav
+							+navItem(i.url, i.name, i.url = activeMenu)
 		//end header-wrapper
