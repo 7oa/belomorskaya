@@ -12,20 +12,23 @@ $(document).ready(function() {
     });
 
     // выбор дат
-    $('.select-date-input').datepicker({
+    $(".select-date-input").datepicker({
         dateFormat: "d MM",
         autoClose: true,
         language: {
             months: ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря']
+        },
+        onSelect: function (fd, d, picker) {
+            var dt = fd.split(" ");
+            var label = picker.$el.prev(".label-date-first");
+            label.children(".dd").text(dt[0]);
+            label.children(".mm").text(dt[1]);
         }
     });
 
-    // masonry
-    // $('.rooms').masonry({
-    //     itemSelector: '.room',
-    //     gutter: 5,
-    //     columnWidth: 390,
-    // });
+    $(".js-reserv").click(function () {
+        console.log("js-reserv");
+    });
 
     //кол-во гостей
     $(".js-plus").click(function () {
