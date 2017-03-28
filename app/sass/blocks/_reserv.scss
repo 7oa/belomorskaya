@@ -16,7 +16,7 @@
   }
   &__ttl{
     font: 13px/30px "OpenSans";
-    color: $c_blocks;
+    color: $c_blue_text;
     text-transform: uppercase;
   }
   &:nth-child(3){
@@ -34,10 +34,9 @@
 }
 .select-date{
   position: relative;
-  width: 230px;
   height: 60px;
-  margin: 0 auto;
-  background: url(images/select-date.png) no-repeat right 47px;
+  margin-right: 44px;
+  background: url(images/select-date.png) no-repeat right 50px;
   &-input{
     opacity: 0;
     width: 100%;
@@ -52,7 +51,7 @@
   right: 0;
   font-family: "PlayfairDisplaySC";
   font-size: 19px;
-  line-height: 50px;
+  line-height: 55px;
   color: $c_main;
   span.dd{
     font-size: 80px;
@@ -72,12 +71,12 @@
   &__count{
     font-size: 80px;
     font-family: "PlayfairDisplaySC";
-    line-height: 50px;
+    line-height: 55px;
   }
   &__plus{
     position: absolute;
-    top: 24px;
-    left: 0px;
+    top: 34px;
+    left: -2px;
     background: url(images/plus-minus.png) no-repeat 0 -20px;
     width: 20px;
     height: 20px;
@@ -88,8 +87,8 @@
   }
   &__minus{
     position: absolute;
-    top: 24px;
-    right: 0px;
+    top: 34px;
+    right: 2px;
     background: url(images/plus-minus.png) no-repeat 0 0;
     width: 20px;
     height: 20px;

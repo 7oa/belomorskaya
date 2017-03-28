@@ -47,4 +47,60 @@ $(document).ready(function() {
             count_input.val(count_num-1);
         }
     });
-})
+
+    //popup
+    $('.js-open-callback').click( function(event){
+        event.preventDefault();
+        $('#callback__overlay').fadeIn(400,
+            function(){
+                $('#callback')
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '10px'}, 200);
+            });
+    });
+    $('#callback__close, #callback__overlay').click( function(){
+        $('#callback')
+            .animate({opacity: 0, top: '0'}, 200,
+                function(){
+                    $(this).css('display', 'none');
+                    $('#callback__overlay').fadeOut(400);
+                }
+            );
+    });
+
+    //forms
+    function focusForm($param) {
+        $('.'+$param).on('focusin', function () {
+            var input = $(this).children($param);
+            if($(this).children(".after").length==0){
+                var placeholder = input.attr("placeholder");
+                input.attr("plc", placeholder);
+                input.attr("placeholder","");
+                $(this).append('<div class="after" style="display: none;">'+placeholder+'</div>');
+                $(this).children(".after").fadeIn("slow");
+            }
+        });
+        $('.'+$param).on('focusout', function () {
+            var input = $(this).children($param);
+            if(input.val().length==0){
+                var placeholder = input.attr("plc");
+                input.attr("placeholder", placeholder);
+                $(this).children(".after").remove();
+            }
+        });
+    }
+
+    $(".error").click(function () {
+        $(this).val("").removeClass("error");
+    });
+
+    focusForm("input");
+    focusForm("textarea");
+
+    //submit
+    $(".js-callback-submit").click(function () {
+        $("#callback").addClass("flip");
+        return false;
+    })
+
+});

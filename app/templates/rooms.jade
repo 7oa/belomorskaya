@@ -1,21 +1,51 @@
 extends core/_template
 
 append sharedVars
-	- var activeMenu = 'Об отеле';
+	- var activeMenu = 'Номера';
 
 block title
-	title Главная
+	title Номера
 
 block content
 	//workarea
 	.workarea
 		//fullsize-img
-		.fullsize-img
+		.fullsize-img.fullsize-img_rooms
 			img(src="images/hotel-bg.jpg")
-			.fullsize-img__content
-				.fullsize-img__city Архангельск
-				.fullsize-img__ttl Гостиница<br>Беломорская
-				.fullsize-img__desc В лучших традициях северного гостеприимства
+			.fullsize-img__content.fullsize-img__content_rooms
+				.fullsize-img__city Гостиница беломорская
+				.fullsize-img__ttl Наши номера
+				.fullsize-img__desc Мы предлагаем Вам уютные номера различных категорий:
+				.container
+					.rooms-counter-wrapper
+						.row
+							.col-xs-4
+								.rooms-counter
+									span.num 1
+									| Улучшенный люкс
+							.col-xs-4
+								.rooms-counter
+									span.num 3
+									| Люкс стандарт
+							.col-xs-4
+								.rooms-counter
+									span.num 39
+									| Одноместные
+							.col-xs-4
+								.rooms-counter
+									span.num 6
+									| Полулюкс
+							.col-xs-4
+								.rooms-counter
+									span.num 3
+									| Хостел
+							.col-xs-4
+								.rooms-counter
+									span.num 49
+									| Двуместные
+					.fullsize-img__bottom.
+						Действуют тарифы: «Завтрак включен» и  «Без завтрака»<br>
+						Стоимость завтрака - 200 руб.
 		//end fullsize-img
 
 		.yellow-bg

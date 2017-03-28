@@ -1,7 +1,7 @@
 .special-offers-swiper-container{
   width: 100%;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   &__item{
   }
   &__img{
@@ -21,16 +21,17 @@
       width: 94px;
       height: 7px;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 33px;
     }
   }
   &__ttl{
     font: 36px/48px "PlayfairDisplaySC";
-    margin-bottom: 10px;
+    margin-bottom: 39px;
   }
   &__text{
     color: $c_blocks;
     font: 17px/30px "OpenSans";
+    margin-bottom: 50px;
     p{
       margin-bottom: 30px;
     }

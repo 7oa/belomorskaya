@@ -1,0 +1,41 @@
+.fullsize-img_rooms{
+  height: 780px;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+}
+.fullsize-img__content_rooms{
+  top: 82px;
+  .fullsize-img__desc{
+    margin-bottom: 76px;
+  }
+  .fullsize-img__ttl{
+    margin-bottom: 23px;
+  }
+}
+.rooms-counter{
+  font: 19px/30px "PlayfairDisplaySC";
+  font-weight: bold;
+  margin-bottom: 86px;
+  text-align: left;
+  padding-left: 80px;
+}
+.num{
+  font: 80px/30px "PlayfairDisplaySC";
+  font-weight: normal;
+  margin-right: 10px;
+  display: inline-block;
+}
+.rooms-counter-wrapper{
+  margin-bottom: 14px;
+}
+.fullsize-img__bottom{
+  font: 15px/25px "OpenSans";
+}

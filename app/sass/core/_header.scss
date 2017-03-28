@@ -7,11 +7,12 @@
 }
 .header-logo-wrapper{
     width: 330px;
-    height: 120px;
+    height: 170px;
     background: $c_violet;
     float: left;
-    padding-left: 30px;
-    padding-top: 50px;
+    padding-left: 33px;
+    padding-top: 49px;
+    box-sizing: border-box;
 }
 .top-logo{
     background: url(images/top-logo.png) no-repeat;
@@ -31,7 +32,7 @@
 .header-contact-wrapper{
     @include clearfix();
     float: left;
-    padding-top: 30px;
+    padding-top: 42px;
 }
 .header-contact-item{
     float: left;
@@ -40,7 +41,7 @@
     &_point{
         background: url(images/icon-point.png) no-repeat;
         background-position-y: center;
-        padding-left: 30px;
+        padding-left: 27px;
     }
     &_phone{
         background: url(images/icon-tel.png) no-repeat;
@@ -48,7 +49,7 @@
         padding-left: 30px;
     }
     &:first-of-type{
-        margin-right: 30px;
+        margin-right: 67px;
     }
 }
 .header-menu-wrapper{
@@ -84,7 +85,7 @@
 }
 .header-button-wrapper{
     float:right;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 

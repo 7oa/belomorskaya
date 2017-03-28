@@ -3,7 +3,7 @@
   background: $c_violet;
   color: $white;
   font: 13px/50px "OpenSans";
-  padding: 0 30px;
+  padding: 0 32px;
   text-transform: uppercase;
   border-radius: 3px;
   transition: .5s;
@@ -17,10 +17,12 @@
   background: $c_orange;
   color: $white;
   font: 13px/70px "OpenSans";
-  padding: 0 50px;
+  padding: 0 56px;
   text-transform: uppercase;
   border-radius: 3px;
   transition: .5s;
+  border: 0;
+  cursor: pointer;
   &:hover{
     box-shadow: 10px 17.3px 60px rgba(251, 141, 5, 0.4);
     background: $c_button_orange_hover;
@@ -28,7 +30,7 @@
 }
 .button-showmore{
   display: inline-block;
-  font: 13px/50px "OpenSansSemiBold";
+  font: 13px/48px "OpenSansSemiBold";
   text-transform: uppercase;
   border: 2px solid $c_orange2;
   border-radius: 3px;
