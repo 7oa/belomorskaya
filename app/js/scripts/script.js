@@ -11,6 +11,16 @@ $(document).ready(function() {
         loop: true
     });
 
+	var swiper = new Swiper('.room-slider-container', {
+		pagination: '.room-slider-pagination',
+		paginationClickable: true,
+		nextButton: '.room-slider-button-next',
+		prevButton: '.room-slider-button-prev',
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true
+	});
+
     // выбор дат
     $(".select-date-input").datepicker({
         dateFormat: "d MM",

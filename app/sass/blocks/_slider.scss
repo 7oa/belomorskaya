@@ -1,3 +1,60 @@
+.swiper-pagination-bullet{
+  background-color: #fca942;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+}
+.swiper-pagination-bullet-active{
+  opacity: 1;
+}
+
+.next,
+.prev{
+  width: 80px;
+  height: 80px;
+  background-color: $white;
+  box-shadow: 10px 17.3px 60px rgba(54, 83, 116, 0.2);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: .5s;
+  z-index: 2;
+  position: absolute;
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 43%;
+    width: 8px;
+    height: 14px;
+  }
+  &:hover{
+    box-shadow: 10px 17.3px 60px rgba(251, 141, 5, 0.4);
+  }
+}
+.next{
+  &:after {
+    left: 47%;
+    background: url(images/slider-arr.png) no-repeat -8px 0px;
+  }
+  &:hover{
+    &:after{
+      background-position-y: -14px;
+    }
+  }
+}
+.prev{
+  &:after{
+    left: 43%;
+    background: url(images/slider-arr.png) no-repeat 0px 0px;
+  }
+  &:hover{
+    &:after{
+      background-position-y: -14px;
+    }
+  }
+}
+
 .special-offers-swiper-container{
   width: 100%;
   overflow: hidden;
@@ -36,68 +93,18 @@
       margin-bottom: 30px;
     }
   }
-  &__button{
-
-  }
 }
 .special-offers-swiper-pagination{
   text-align: center;
-  .swiper-pagination-bullet{
-    background-color: #fca942;
-    opacity: 0.3;
-    width: 10px;
-    height: 10px;
-    margin: 0 3px;
-  }
-  .swiper-pagination-bullet-active{
-    opacity: 1;
-  }
 }
+
 .special-offers-swiper-button-next,
 .special-offers-swiper-button-prev{
-  width: 80px;
-  height: 80px;
-  background-color: $white;
-  box-shadow: 10px 17.3px 60px rgba(54, 83, 116, 0.2);
-  border-radius: 40px;
-  position: absolute;
   top:40%;
-  cursor: pointer;
-  transition: .5s;
-  z-index: 2;
-  &:after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 43%;
-    width: 8px;
-    height: 14px;
-  }
-  &:hover{
-    box-shadow: 10px 17.3px 60px rgba(251, 141, 5, 0.4);
-  }
 }
 .special-offers-swiper-button-next{
   right: 20px;
-  &:after{
-    background: url(images/slider-arr.png) no-repeat -8px 0px;
-    left: 47%;
-  }
-  &:hover{
-    &:after{
-      background-position-y: -14px;
-    }
-  }
 }
 .special-offers-swiper-button-prev{
   left: 20px;
-  &:after{
-    background: url(images/slider-arr.png) no-repeat 0px 0px;
-    left: 43%;
-  }
-  &:hover{
-    &:after{
-      background-position-y: -14px;
-    }
-  }
 }
