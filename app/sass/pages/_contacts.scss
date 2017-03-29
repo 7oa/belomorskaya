@@ -1,0 +1,50 @@
+.contact-wrapper{
+  font: 15px/25px "OpenSans";
+
+  strong{
+    font-weight: bold;
+  }
+
+}
+.panorama{
+  margin-bottom: 93px;
+  iframe{
+    width: 100%;
+    height: 740px;
+  }
+}
+.contact-content{
+  @include clearfix();
+
+  &__col{
+    float: right;
+    width: 50%;
+  }
+  &__text{
+    padding-top: 58px;
+    padding-left: 100px;
+    max-width: 520px;
+  }
+  &__block{
+    margin-bottom: 84px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__ttl{
+    font: 44px/30px "PlayfairDisplaySC";
+    font-weight: bold;
+    margin-bottom: 54px;
+  }
+  &__div{
+    margin-bottom: 24px;
+  }
+}
+.contact-map{
+  position: relative;
+  #map{
+    position: relative;
+    width: 100%;
+    height: 880px;
+  }
+}

@@ -102,5 +102,11 @@ $(document).ready(function() {
         $("#callback").addClass("flip");
         return false;
     })
-
+    
+    //menu-open
+    $(".js-menu").click(function () {
+        $(this).toggleClass("drop");
+        $(".content").toggleClass("menu-overlay");
+        $(".header-menu-wrapper").slideToggle();
+    })
 });

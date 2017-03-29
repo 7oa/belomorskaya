@@ -1,0 +1,59 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Контакты';
+
+block title
+    title Контакты
+
+block content
+    //workarea
+    .workarea
+        .contact-wrapper
+            .panorama.
+                <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sru!2sru!4v1490784111939!6m8!1m7!1sBFjuxX-w9ngRX49I7Jr-gw!2m2!1d64.54245030673368!2d40.56833433169359!3f255!4f0!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
+            .contact-content
+                .contact-content__col
+                    .contact-content__text
+                        .contact-content__block
+                            // Как добраться
+                            .contact-content__ttl Как добраться
+                            .contact-content__div
+                                strong Аэропорт "Талаги":
+                                |  до мрв автобус №12, №12к, затем автобус №1, №7, №11, №76 до остановки "Магазин Полюс" или "Кинотеатр Русь".
+                            .contact-content__div
+                                strong Аэропорт "Васьково":
+                                |  до мрв автобуе №110, затем автобус №1, №7, №11, №76 до остановки "Магазин Полюс" или "Кинотеатр Русь".
+                            .contact-content__div
+                                strong Ж/д вокзал:
+                                |  автобус №1, №33, №64, №76  до остановки "Магазин Полюс" или "Кинотеатр Русь".
+                            .contact-content__div
+                                a(herf="#") Автобусные маршруты на карте города
+                            // end Как добраться
+
+                        .contact-content__block
+                            //Как связаться
+                            .contact-content__ttl Как связаться
+                            .contact-content__div
+                                strong Администратор:<br>
+                                | (8182) 66-16-00
+                            .contact-content__div
+                                strong Аренда банкетных залов:<br>
+                                | (8182) 64-30-60
+                            .contact-content__div
+                                strong Факс:
+                                |  (8182) 66-14-38<br>
+                                | E-mail: belhotel@list.ru
+                            .contact-content__div
+                                strong Адрес:
+                                |  163 000, Россия,<br>
+                                | г.Архангельск, ул. Тимме, д.3
+                            // end Как связаться
+                .contact-content__col
+                    .contact-map
+                        #map
+                        //map script
+                        include blocks/_map
+                        //end map script
+
+    //end workarea

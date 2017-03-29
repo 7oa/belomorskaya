@@ -14,27 +14,35 @@
 .fullsize-img__content_rooms{
   top: 82px;
   .fullsize-img__desc{
-    margin-bottom: 76px;
+    margin-bottom: 87px;
   }
   .fullsize-img__ttl{
     margin-bottom: 23px;
   }
 }
 .rooms-counter{
-  font: 19px/30px "PlayfairDisplaySC";
-  font-weight: bold;
-  margin-bottom: 86px;
+  margin-bottom: 78px;
   text-align: left;
   padding-left: 80px;
+  display: table;
+  &__num{
+    font: 80px/30px "PlayfairDisplaySC";
+    font-weight: normal;
+    padding-right: 10px;
+    display: table-cell;
+    height: 60px;
+  }
+  &__desc{
+    font: 19px/30px "PlayfairDisplaySC";
+    font-weight: bold;
+    display: table-cell;
+    height: 60px;
+    vertical-align: middle;
+  }
 }
-.num{
-  font: 80px/30px "PlayfairDisplaySC";
-  font-weight: normal;
-  margin-right: 10px;
-  display: inline-block;
-}
+
 .rooms-counter-wrapper{
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 .fullsize-img__bottom{
   font: 15px/25px "OpenSans";
