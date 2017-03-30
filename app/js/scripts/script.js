@@ -21,6 +21,14 @@ $(document).ready(function() {
 		loop: true
 	});
 
+	var swiper = new Swiper('.info-slider-container', {
+		pagination: '.info-slider-pagination',
+		paginationClickable: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true
+	});
+
     // выбор дат
     $(".select-date-input").datepicker({
         dateFormat: "d MM",
@@ -82,6 +90,9 @@ $(document).ready(function() {
     function focusForm($param) {
         $('.'+$param).on('focusin', function () {
             var input = $(this).children($param);
+            if($(this).hasClass("error")){
+				$(this).removeClass("error")
+            }
             if($(this).children(".after").length==0){
                 var placeholder = input.attr("placeholder");
                 input.attr("plc", placeholder);
@@ -99,10 +110,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    $(".error").click(function () {
-        $(this).val("").removeClass("error");
-    });
 
     focusForm("input");
     focusForm("textarea");

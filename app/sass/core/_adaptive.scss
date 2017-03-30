@@ -46,7 +46,6 @@
   .header-menu-wrapper{
     display: none;
     border: 0;
-    z-index: 1;
     padding: 23px 16px 26px;
     height: auto;
     width: 268px;
@@ -113,37 +112,39 @@
       font-size: 12px;
     }
   }
-  .label-date-first{
-    line-height: 42px;
-    span.dd{
-      font-size: 48px;
-      margin-right: 10px;
+  .reserv-small{
+    .button-reserv{
+      padding: 0 20px;
     }
-    span.mm{
-      font-size: 15px;
-    }
-  }
-  .select-date{
-    margin-right: 15px;
-    background-position-y: 27px;
-  }
-  .select-guest-wrapper{
-    width: 100%;
-    &__count{
-      font-size: 48px;
+    .label-date-first{
       line-height: 42px;
+      span.dd{
+        font-size: 48px;
+        margin-right: 10px;
+      }
+      span.mm{
+        font-size: 15px;
+      }
     }
-    &__plus{
-      top: 14px;
-      left: 14px;
+    .select-date{
+      margin-right: 15px;
+      background-position-y: 27px;
     }
-    &__minus{
-      top: 14px;
-      right: 7px;
+    .select-guest-wrapper{
+      width: 100%;
+      &__count{
+        font-size: 48px;
+        line-height: 42px;
+      }
+      &__plus{
+        top: 14px;
+        left: 14px;
+      }
+      &__minus{
+        top: 14px;
+        right: 7px;
+      }
     }
-  }
-  .button-reserv{
-    padding: 0 20px;
   }
   .reserv-small-button-wrapper{
     padding: 20px 0;
@@ -281,5 +282,137 @@
     #map{
       height: 500px;
     }
+  }
+
+  //room
+  .room-content{
+    width: 740px;
+    h2{
+      font-size: 33px;
+    }
+  }
+  .room-slider{
+    margin-bottom: 45px;
+  }
+  .room-slider-button-next,
+  .room-slider-button-prev{
+    display: none;
+  }
+  .room-slider-container {
+    width: 100%;
+  }
+  .room-slider__img{
+    height: 380px;
+  }
+  .room-slider-pagination{
+    text-align: center;
+    margin-top: 17px;
+  }
+  .room-content-prev{
+    margin-bottom: 84px;
+    &__ttl {
+      margin-top: 0;
+      padding-top: 0;
+      height: auto;
+      margin-bottom: 50px;
+      width: 100%;
+      h1 {
+        font-size: 48px;
+      }
+    }
+    &__desc{
+      margin-bottom: 27px;
+    }
+  }
+  .room-fulldesc{
+    margin-bottom: 69px;
+    h2{
+      margin-bottom: 31px;
+    }
+    &__text{
+      font: 17px/36px "OpenSans";
+      margin-bottom: 0px;
+    }
+    &__left,
+    &__right{
+      padding-right: 0px;
+    }
+    &__right{
+      display: none;
+    }
+    .document{
+      display: none;
+    }
+  }
+  .room-include{
+    margin-bottom: 94px;
+    h2{
+      margin-bottom: 30px;
+    }
+  }
+  .others-rooms{
+    margin-bottom: 16px;
+    h2{
+      margin-bottom: 40px;
+    }
+    &-list{
+      margin: 0 -7px;
+    }
+    .room_size_2{
+      float: left;
+      &:first-of-type{
+        width: 360px;
+        height: 374px;
+      }
+    }
+  }
+
+  //Бронирование
+  .reserv-wrapper{
+    width: 670px;
+    padding-top: 63px;
+  }
+  .reserv-ttl{
+    margin-bottom: 74px;
+    .reserv-minittl{
+      margin-bottom: 19px;
+    }
+    h1{
+      font-size: 48px;
+    }
+  }
+  .reserv-guest-info{
+    width: 320px;
+  }
+  .reserv-info{
+    margin-bottom: 29px;
+    .reserv-minittl{
+      margin-bottom: 25px;
+    }
+  }
+  .reserv-guest{
+    .reserv-minittl{
+      margin-bottom: 28px;
+    }
+  }
+  .reserv-guest-check{
+    padding-left: 24px;
+    width: 310px;
+  }
+  .radioline{
+    margin-bottom: 23px;
+  }
+  .radioline-ttl{
+    width: 126px;
+  }
+  .radioline-radio__item{
+    float: none;
+    margin-bottom: 3px;
+  }
+  .checkline{
+    margin-bottom: 87px;
+  }
+  .captcha{
+    margin-bottom: 25px;
   }
 }

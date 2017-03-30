@@ -1,0 +1,32 @@
+.info-wrapper{
+  margin-bottom: 50px;
+}
+.info-block{
+  margin-bottom: 33px;
+
+  &__ttl{
+	font: 21px/36px "PlayfairDisplaySC";
+	font-weight: bold;
+	margin-bottom: 3px;
+  }
+
+  &__text{
+	font: 17px/36px "OpenSans";
+  }
+}
+.info-slider-container{
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.info-slider__img{
+  background: $white;
+  img{
+	border: 1px solid $c_border_grey;
+	border-radius: 3px;
+	padding: 15px;
+	max-width: 850px;
+  }
+}
+.info-slider-pagination{
+  text-align: center;
+}

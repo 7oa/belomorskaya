@@ -1,0 +1,63 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Информация';
+
+block title
+    title Информация
+
+block content
+    //workarea
+    .workarea
+        //container
+        .container
+            //withsidebar-wrapper
+            .withsidebar-wrapper
+                //left-sidebar
+                .left-sidebar
+                    - var lmenu = ["Как передвигаться по городу", "Где покушать", "Чем заняться вечером", "Что вокруг", "Дополнительные услуги"]
+                    ul.left-menu
+                        each item in lmenu
+                            li.left-menu__item
+                             a.left-menu__link(href="#", class=item=="Как передвигаться по городу" ? 'active' : '')= item
+                //end left-sidebar
+
+                //right-content
+                .right-content
+                    .minittl Полезная информация
+                    h1 Как передвигаться по городу
+
+                    //info-wrapper
+                    .info-wrapper
+                        .info-block
+                            .info-block__ttl Проезд от ж/д вокзала
+                            .info-block__text От железнодорожного вокзала до гостиницы можно доехать на городском автобусе №33, №64, до остановки "Магазин Полюс" или "Кинотеатр Русь"
+
+                        .info-block
+                            .info-block__ttl Проезд из аэропорта
+                            .info-block__text Из аэропорта "Талаги" можно доехать до морского-речного вокзала на городском автобусе №12, №12к, а затем пересесть на автобус №1, №7, №11, №76 до остановки "Магазин Полюс" или "Кинотеатр Русь" или воспользоваться услугами такси
+
+                        .info-block
+                            .info-block__ttl Проезд от автовокзала
+                            .info-block__text От автовокзала до гостиницы можно доехать на городском автобусе №31 до остановки "Магазин Полюс" или "Кинотеатр Русь"
+                    //end info-wrapper
+
+                    //info-slider
+                    .info-slider
+                        .info-slider-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .info-slider__img
+                                        img(src="images/TEMP/info-1.jpg")
+                                .swiper-slide
+                                    .info-slider__img
+                                        img(src="images/TEMP/info-1.jpg")
+                                .swiper-slide
+                                    .info-slider__img
+                                        img(src="images/TEMP/info-1.jpg")
+                        .info-slider-pagination
+                    //end info-slider
+                //end right-content
+            //end withsidebar-wrapper
+        //end container
+    //end workarea

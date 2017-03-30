@@ -147,3 +147,25 @@
     left: 65px;
   }
 }
+.error-message{
+  display: none;
+  position: absolute;
+  bottom: 11px;
+  left: 18px;
+  color: $error;
+  font: 12px/30px "OpenSans";
+  font-style: italic;
+}
+.error{
+  .callback-form__input{
+    background-color: $white;
+    border: 2px solid $error;
+  }
+  .callback-form__textarea{
+    background-color: $white;
+    border: 2px solid $error;
+  }
+  .error-message{
+    display: block;
+  }
+}

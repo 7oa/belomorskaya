@@ -9,10 +9,15 @@ block title
 block content
     //workarea
     .workarea
+        //contact-wrapper
         .contact-wrapper
+            //panorama
             .panorama.
                 <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sru!2sru!4v1490784111939!6m8!1m7!1sBFjuxX-w9ngRX49I7Jr-gw!2m2!1d64.54245030673368!2d40.56833433169359!3f255!4f0!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
+            //end panorama
+            //contact-content
             .contact-content
+                //contact-content__col 1
                 .contact-content__col
                     .contact-content__text
                         .contact-content__block
@@ -49,11 +54,16 @@ block content
                                 |  163 000, Россия,<br>
                                 | г.Архангельск, ул. Тимме, д.3
                             // end Как связаться
+                //end contact-content__col 1
+
+                //contact-content__col 2
                 .contact-content__col
                     .contact-map
                         #map
                         //map script
                         include blocks/_map
                         //end map script
-
+                //end contact-content__col 2
+            //end contact-content
+        //end contact-wrapper
     //end workarea

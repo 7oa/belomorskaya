@@ -1,0 +1,123 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Резервирование';
+
+block title
+    title Резервирование
+
+block content
+    //workarea
+    .workarea
+        .reserv-wrapper
+            .reserv-ttl
+                .reserv-minittl бронирование номера
+                h1 Люкс улучшенный
+
+            //reserv-form
+            form.reserv-form
+                //информация о бронировании
+                .reserv-info
+                    .reserv-minittl информация о бронировании
+                    //reserv-info-wrapper
+                    .reserv-info-wrapper
+                        .row
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Дата заезда
+                                    .select-date
+                                        .label-date-first#formatDate
+                                            span.dd 10
+                                            span.mm февраля
+                                        input.select-date-input#js-firstDate(type="text", value="8 марта")
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Дата выезда
+                                    .select-date
+                                        .label-date-first
+                                            span.dd 15
+                                            span.mm aпреля
+                                        input.select-date-input#js-secondDate(type="text")
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Количество номеров
+                                    .select-guest-wrapper
+                                        .select-guest-wrapper__count.js-count 1
+                                        input.select-guest-input.js-count-input(type="text" value="1")
+                                        .select-guest-wrapper__plus.js-plus
+                                        .select-guest-wrapper__minus.js-minus
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Взрослые
+                                    .select-guest-wrapper
+                                        .select-guest-wrapper__count.js-count 2
+                                        input.select-guest-input.js-count-input(type="text" value="2")
+                                        .select-guest-wrapper__plus.js-plus
+                                        .select-guest-wrapper__minus.js-minus
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Дети
+                                    .select-guest-wrapper
+                                        .select-guest-wrapper__count.js-count 0
+                                        input.select-guest-input.js-count-input(type="text" value="0")
+                                        .select-guest-wrapper__plus.js-plus
+                                        .select-guest-wrapper__minus.js-minus
+                            .col-lg-4.col-xs-6
+                                .reserv-select-date
+                                    .reserv-small-parametrs-item__ttl Стоимость, руб
+                                    .select-guest-wrapper
+                                        .select-guest-wrapper__sum.js-sum 15 100
+                                        input.select-guest-input.js-count-input(type="text" value="15100")
+                    //end reserv-info-wrapper
+                //end информация о бронировании
+
+                //Информация о госте
+                .reserv-guest
+                    .reserv-minittl Информация о госте
+                    //reserv-guest-wrapper
+                    .reserv-guest-wrapper
+                        .row
+                            .col-xs-6
+                                .reserv-guest-info
+                                    .input.error
+                                        input.callback-form__input(type="text", placeholder="ФИО Гостя*")
+                                        .error-message Это обязательное поле
+                                    .input
+                                        input.callback-form__input(type="text", placeholder="Телефон*")
+                                    .input
+                                        input.callback-form__input(type="email", placeholder="E-mail")
+                                    .textarea
+                                        textarea.callback-form__textarea(placeholder="Комментарий", style="height: 230px;")
+                            .col-xs-6
+                                .reserv-guest-check
+                                    .radioline
+                                        .radioline-ttl Цель поездки:
+                                        .radioline-radio
+                                            .radioline-radio__item
+                                                input(type="radio", calss="radio", name="line1", id="radio1", checked)
+                                                label(for="radio1") Отдых
+                                            .radioline-radio__item
+                                                input(type="radio", calss="radio",name="line1", id="radio2")
+                                                label(for="radio2") Работа
+                                    .radioline
+                                        .radioline-ttl Вид расчета:
+                                        .radioline-radio
+                                            .radioline-radio__item
+                                                input(type="radio", calss="radio", name="line2", id="radio3")
+                                                label(for="radio3") Наличный
+                                            .radioline-radio__item
+                                                input(type="radio", calss="radio",name="line2", id="radio4", checked)
+                                                label(for="radio4") Безналичный
+                                    .checkline
+                                        input(type="checkbox", class="checkbox", id="checkbox")
+                                        label(for="checkbox") Согласие с
+                                            a(href="#")  правилами бронирования
+
+                                    .captcha
+                                        img(src="images/TEMP/captcha.png")
+
+                                    input.button-reserv.button-reserv_wide(type="submit", value="Забронировать")
+                    //end reserv-guest-wrapper
+                //end Информация о госте
+            //end reserv-form
+    //end workarea

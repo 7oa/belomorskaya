@@ -23,6 +23,10 @@
   transition: .5s;
   border: 0;
   cursor: pointer;
+  &_wide{
+    width: 100%;
+    line-height: 90px;
+  }
   &:hover{
     box-shadow: 10px 17.3px 60px rgba(251, 141, 5, 0.4);
     background: $c_button_orange_hover;
