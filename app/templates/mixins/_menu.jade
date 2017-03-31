@@ -2,4 +2,4 @@
 
 mixin navItem(url, name, current)
     li.header-menu__items
-        a.header-menu__links(class=name==current ? 'header-menu__links_active' : '', href=url)= name
+        a.header-menu__links(class=name==current ? 'header-menu__links_active' : '', href=url, title=name)= name

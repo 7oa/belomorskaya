@@ -88,10 +88,19 @@
         color: $c_blocks;
         text-transform: uppercase;
         font: 15px/30px "OpenSans";
-        transition: .5s;
+        //transition: .5s;
         &:hover{
             color: $c_orange;
             font-weight: bold;
+        }
+        &::after{
+            display:block;
+            content:attr(title);
+            font-weight:bold;
+            height:1px;
+            color:transparent;
+            overflow:hidden;
+            visibility:hidden;
         }
         &_active{
             color: $c_orange;

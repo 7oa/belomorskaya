@@ -54,7 +54,7 @@ gulp.task('sass', function() {
         //        .pipe(prefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(autoprefixerOptions))
-        //.pipe(cssmin())
+        .pipe(cssmin())
         .pipe(gulp.dest( dest_path ))
         .pipe(connect.reload());
 });
@@ -63,7 +63,7 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     gulp.src('./app/js/scripts.js')
         .pipe(rigger())
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest( dest_path + '/js/'))
         .pipe(connect.reload());
 });

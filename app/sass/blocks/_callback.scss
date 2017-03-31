@@ -9,7 +9,7 @@
   margin: 0 auto;
   display: none;
   opacity: 0;
-  z-index: 5;
+  z-index: 12;
   transition: transform .6s;
   transform-style: preserve-3d;
 
@@ -32,7 +32,7 @@
   }
 
   &__overlay{
-    z-index:3;
+    z-index:11;
     position:fixed;
     background-color:#23203d;
     opacity: 0.5;
@@ -60,6 +60,7 @@
   &__input{
     border: 1px solid $c_border_grey;
     font: 15px/53px "OpenSans";
+    height: 53px;
     font-style: italic;
     padding: 0 15px;
     background-color: $c_form_bg;
