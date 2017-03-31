@@ -1,14 +1,21 @@
-@include font-face(OpenSans, fonts/OpenSansRegular/OpenSansRegular, normal);
-@include font-face(OpenSans, fonts/OpenSansItalic/OpenSans-Italic, normal, italic);
-@include font-face(OpenSans, fonts/OpenSansBold/OpenSansBold, bold);
-@include font-face(OpenSans, fonts/OpenSansBoldItalic/OpenSansBoldItalic, bold, italic);
-@include font-face(OpenSansLight, fonts/OpenSansLight/OpenSansLight, normal);
-@include font-face(OpenSansExtraBold, fonts/OpenSansExtraBold/OpenSansExtraBold, normal);
-@include font-face(OpenSansExtraBoldItalic, fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic, normal);
-@include font-face(OpenSansSemiBold, fonts/OpenSansSemiBold/OpenSans-Semibold, normal);
+@include font-face(OpenSans, "fonts/OpenSansRegular/OpenSans", normal);
+@include font-face(OpenSans, "fonts/OpenSansItalic/OpenSans-Italic", normal, italic);
+@include font-face(OpenSans, "fonts/OpenSansBold/OpenSans-Bold", bold);
+@include font-face(OpenSans, "fonts/OpenSansBoldItalic/OpenSans-BoldItalic", bold, italic);
 
-@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCRegular/PlayfairDisplaySCRegular, normal);
-@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCBold/PlayfairDisplaySCBold, bold);
-@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCItalic/PlayfairDisplaySCItalic, normal, italic);
-@include font-face(PlayfairDisplaySC, fonts/PlayfairDisplaySCBoldItalic/PlayfairDisplaySCBoldItalic, bold, italic);
-@include font-face(PlayfairDisplaySCBlack, fonts/PlayfairDisplaySCBlack/PlayfairDisplaySC-Black, normal);
+@include font-face(OpenSansLight, "fonts/OpenSansLight/OpenSans-Light", normal);
+@include font-face(OpenSansLight, "fonts/OpenSansLightItalic/OpenSansLight-Italic", normal, italic);
+
+@include font-face(OpenSansExtraBold, "fonts/OpenSansExtraBold/OpenSans-Extrabold", normal);
+@include font-face(OpenSansExtraBold, "fonts/OpenSansExtraBoldItalic/OpenSans-ExtraboldItalic", normal, italic);
+
+@include font-face(OpenSansSemiBold, "fonts/OpenSansSemiBold/OpenSans-Semibold", normal);
+@include font-face(OpenSansSemiBold, "fonts/OpenSansSemiBoldItalic/OpenSans-SemiboldItalic", normal, italic);
+
+@include font-face(PlayfairDisplaySC, "fonts/PlayfairDisplaySCRegular/PlayfairDisplaySC-Regular", normal);
+@include font-face(PlayfairDisplaySC, "fonts/PlayfairDisplaySCBold/PlayfairDisplaySC-Bold", bold);
+@include font-face(PlayfairDisplaySC, "fonts/PlayfairDisplaySCItalic/PlayfairDisplaySC-Italic", normal, italic);
+@include font-face(PlayfairDisplaySC, "fonts/PlayfairDisplaySCBoldItalic/PlayfairDisplaySC-BoldItalic", bold, italic);
+
+@include font-face(PlayfairDisplaySCBlack, "fonts/PlayfairDisplaySCBlack/PlayfairDisplaySC-Black", normal);
+@include font-face(PlayfairDisplaySCBlack, "fonts/PlayfairDisplaySCBlack/PlayfairDisplaySC-BlackItalic", normal, italic);
