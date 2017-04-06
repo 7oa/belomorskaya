@@ -130,6 +130,9 @@
       margin-right: 15px;
       background-position-y: 27px;
     }
+    .select-date__arrow{
+      top: 32px;
+    }
     .select-guest-wrapper{
       width: 100%;
       &__count{
@@ -137,11 +140,11 @@
         line-height: 42px;
       }
       &__plus{
-        top: 14px;
+        top: 6px;
         left: 11px;
       }
       &__minus{
-        top: 14px;
+        top: 6px;
         right: 10px;
       }
     }
@@ -471,5 +474,8 @@
     .left-menu__link{
       padding-left: 17px;
     }
+  }
+  .header-menu__links:hover{
+    margin-left: 0;
   }
 }

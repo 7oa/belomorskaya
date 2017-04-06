@@ -73,8 +73,9 @@ $(document).ready(function() {
             function(){
                 $('#callback')
                     .css('display', 'block')
-                    .animate({opacity: 1, top: '10px'}, 200);
+                    .animate({opacity: 1}, 200);
             });
+        $("body").css('overflow-y','hidden');
     });
     $('#callback__close, #callback__overlay').click( function(){
         $('#callback')
@@ -84,6 +85,7 @@ $(document).ready(function() {
                     $('#callback__overlay').fadeOut(400);
                 }
             );
+		$("body").css('overflow-y','auto');
     });
 
     //forms

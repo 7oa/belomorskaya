@@ -32,18 +32,32 @@
   border-radius: 0 3px 3px 0;
   padding: 40px 0;
 }
+.select-date__arrow{
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: url(images/select-date.png) no-repeat;
+  width: 15px;
+  height: 8px;
+}
 .select-date{
   position: relative;
   height: 60px;
   margin-right: 44px;
-  background: url(images/select-date.png) no-repeat right 50px;
+  //background: url(images/select-date.png) no-repeat right 50px;
   &-input{
     opacity: 0;
     width: 100%;
     height: 100%;
     cursor: pointer;
   }
+  &:hover{
+    .select-date__arrow{
+      background-position-x: -15px;
+    }
+  }
 }
+
 .label-date-first{
   position: absolute;
   top: 0;
@@ -75,26 +89,26 @@
   }
   &__plus{
     position: absolute;
-    top: 34px;
+    top: 20px;
     left: -2px;
-    background: url(images/plus-minus.png) no-repeat 0 -20px;
-    width: 20px;
-    height: 20px;
+    background: url(images/plus-minus.png) no-repeat 0 -40px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     &:hover{
-      background-position-x: -20px;
+      background-position-x: -40px;
     }
   }
   &__minus{
     position: absolute;
-    top: 34px;
+    top: 20px;
     right: 2px;
     background: url(images/plus-minus.png) no-repeat 0 0;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     &:hover{
-      background-position-x: -20px;
+      background-position-x: -40px;
     }
   }
 }

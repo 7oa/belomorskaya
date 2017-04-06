@@ -125,6 +125,9 @@ input[type="radio"] + label::before {
 input[type="checkbox"]:checked + label::before {
   background-position: -20px -20px;
 }
+input[type="radio"]:checked + label{
+  color: $c-violet;
+}
 input[type="radio"]:checked + label::before {
   background-position: -20px 0px;
 }

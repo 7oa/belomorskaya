@@ -159,6 +159,8 @@
     font-weight: bold;
     padding: 0 10px;
     text-align: center;
+    opacity: 1;
+    transition: .5s;
   }
   &__hover{
     opacity: 0;
@@ -190,6 +192,9 @@
   &:hover{
     .room__hover{
       opacity: 1;
+    }
+    .room__ttl{
+      opacity: 0;
     }
   }
 }
