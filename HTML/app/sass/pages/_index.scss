@@ -1,0 +1,212 @@
+.fullsize-img{
+  height: 610px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+    img{
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+    }
+  &__content{
+    color: $white;
+    text-align: center;
+    position: absolute;
+    top: 172px;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  &__city{
+    font: 15px/15px "OpenSansSemiBold";
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  &__ttl{
+    font: 72px/80px "PlayfairDisplaySCBlack";
+    margin-bottom: 13px;
+  }
+  &__desc{
+    font: 15px/15px "OpenSansSemiBold";
+  }
+}
+
+.special-offers-wrapper{
+  background: $white;
+  position: relative;
+  padding-top: 91px;
+  padding-bottom: 56px;
+  &-ttl{
+    font: 15px/15px "OpenSansSemiBold";
+    margin-bottom: 57px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c_blocks;
+  }
+}
+.yandex-map-wrapper{
+  height: 700px;
+  position: relative;
+  .container{
+    position: relative;
+  }
+}
+#map{
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-label{
+  background: $white;
+  width: 310px;
+  height: 460px;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  top: 105px;
+  color: $c_blocks;
+  &__content{
+    padding: 62px 25px 0 35px;
+  }
+  &__ttl{
+    font: 19px/30px "OpenSans";
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  &__items{
+
+  }
+  &__item{
+    margin-bottom: 24px;
+    padding-left: 30px;
+    font: 15px/30px "OpenSans";
+    &_point{
+      background: url(images/icon-point.png) no-repeat;
+      background-position-y: 7px;
+    }
+    &_tel{
+      background: url(images/icon-tel.png) no-repeat;
+      background-position-y: 7px;
+      a{
+        color: $c_blocks;
+      }
+    }
+    &_mail{
+      background: url(images/icon-mail.png) no-repeat;
+      background-position-y: 10px;
+    }
+  }
+  &__button-wrapper{
+    background: $c_blue_bg;
+    width: 100%;
+    padding: 26px 0 28px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+  }
+}
+.rooms-wrapper{
+  padding-top: 36px;
+  margin: 0 auto;
+  width: 1240px;
+}
+.rooms{
+  @include clearfix();
+  margin: 0 -17px;
+}
+.room{
+  background: $black;
+  border-radius: 3px;
+  margin: 0 17px 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  &_size_1{
+    width: 390px;
+    height: 180px;
+  }
+  &_size_2{
+    width: 390px;
+    height: 395px;
+    float: left;
+  }
+  &_size_4{
+    width: 815px;
+    height: 395px;
+  }
+  &-wrapper{
+    float: left;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+  }
+  &__ttl{
+    color: $white;
+    position: relative;
+    font: 33px/44px "PlayfairDisplaySC";
+    font-weight: bold;
+    padding: 0 10px;
+    text-align: center;
+    opacity: 1;
+    transition: .5s;
+  }
+  &__hover{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $white;
+    transition: .5s;
+    padding: 25px 35px 40px;
+    &-ttl{
+      font: 19px/30px "PlayfairDisplaySC";
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $c_main;
+      text-transform: uppercase;
+    }
+    &-text{
+      font: 14px/23px "OpenSans";
+      color: $c_blue_text;
+      margin-bottom: 10px;
+    }
+    &-link{
+      color: $c_orange_link;
+      text-transform: uppercase;
+      font: 13px/25px "OpenSans";
+      position: absolute;
+      display: block;
+      bottom: 20px;
+      left: 35px;
+      transition: .5s;
+      opacity: 0;
+    }
+  }
+  &:hover{
+    .room__hover{
+      opacity: 1;
+    }
+    .room__ttl{
+      opacity: 0;
+    }
+    .room__hover-link{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,482 @@
+@media screen and (min-width: 1240px) {
+  .header-menu-wrapper{
+    display: block !important;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .container{
+    width: 100%;
+  }
+  .reserv-small{
+    width: 100%;
+  }
+  .rooms-wrapper{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1239px) {
+  .menu-sm{
+    display: block;
+  }
+  .container{
+    width: 768px;
+  }
+  .reserv-small{
+    width: 768px;
+    height: 110px;
+    margin-top: -55px;
+  }
+  .rooms-wrapper{
+    width: 740px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+  .header-logo-wrapper{
+    width: 300px;
+    height: 117px;
+    padding-top: 32px;
+    padding-left: 78px;
+    z-index: 10;
+  }
+  .top-logo{
+    width: 195px;
+    height: 48px;
+    background-size: 195px 48px;
+  }
+  .header-menu-wrapper{
+    display: none;
+    border: 0;
+    padding: 23px 16px 26px;
+    height: auto;
+    width: 268px;
+    background: $white;
+    left: -308px;
+    top: 117px;
+    bottom: auto;
+    border-bottom: 3px solid $c_violet;
+    z-index: 10;
+  }
+  .header-menu{
+    display: block;
+    &__items{
+      margin-bottom: 14px;
+    }
+  }
+  .header-right-wrapper{
+    height: 117px;
+    width: 460px;
+  }
+  .header-contact-item{
+    float: none;
+    font: 12px/30px "OpenSans";
+    &:first-of-type{
+      margin: 0;
+    }
+    &_point{
+      position: absolute;
+      top: 69px;
+      left: 17px;
+      width: 200px;
+    }
+    &_phone{
+      position: absolute;
+      top: 29px;
+      left: 17px;
+      width: 200px;
+    }
+  }
+  .header-button-wrapper{
+    padding-top: 37px;
+    padding-right: 13px;
+  }
+  .fullsize-img{
+    height: 380px;
+    &__content{
+      top: 83px;
+    }
+    &__city{
+      margin-bottom: -3px;
+    }
+    &__ttl{
+      font-size: 48px;
+      line-height: 50px;
+      margin-bottom: 18px;
+    }
+  }
+  .reserv-small-parametrs-item {
+    padding: 10px 0;
+    &__content {
+      height: 90px;
+    }
+    &__ttl{
+      font-size: 12px;
+    }
+  }
+  .reserv-small{
+    .button-reserv{
+      padding: 0 20px;
+    }
+    .label-date-first{
+      line-height: 42px;
+      span.dd{
+        font-size: 48px;
+        margin-right: 10px;
+      }
+      span.mm{
+        font-size: 15px;
+      }
+    }
+    .select-date{
+      margin-right: 15px;
+      background-position-y: 27px;
+    }
+    .select-date__arrow{
+      top: 32px;
+    }
+    .select-guest-wrapper{
+      width: 100%;
+      &__count{
+        font-size: 48px;
+        line-height: 42px;
+      }
+      &__plus{
+        top: 6px;
+        left: 11px;
+      }
+      &__minus{
+        top: 6px;
+        right: 10px;
+      }
+    }
+  }
+  .reserv-small-button-wrapper{
+    padding: 20px 0;
+  }
+  .rooms{
+    margin: 0 -7px;
+  }
+  .room{
+    margin: 0 7px 14px
+  }
+  .room_size_1,
+  .room_size_2{
+    width: 360px;
+    height: 180px;
+    float: none;
+  }
+  .room_size_4{
+    width: 360px;
+    height: 375px;
+  }
+  .special-offers-wrapper{
+    padding-top: 30px;
+    padding-bottom: 42px;
+    &-ttl{
+      margin-bottom: 20px;
+    }
+  }
+  .special-offers-swiper-container__img{
+    text-align: center;
+    margin-bottom: 8px;
+    img{
+      width: 470px;
+      height: 350px;
+    }
+  }
+  .special-offers-swiper-container{
+    margin-bottom: 17px;
+    &__content:before{
+      content: none;
+    }
+    &__ttl{
+      font-size: 27px;
+      line-height: 33px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    &__text{
+      display: none;
+    }
+    &__button{
+      display: none;
+    }
+  }
+
+  .yandex-map-wrapper{
+    height: 460px;
+  }
+  .map-label{
+    top: 0;
+    &__button-wrapper{
+      background: $white;
+    }
+  }
+  .fullsize-img_rooms{
+    height: 430px;
+  }
+  .fullsize-img__content_rooms{
+    top: 44px;
+    .fullsize-im__city{
+      font-size: 13px;
+    }
+    .fullsize-img__ttl{
+      margin-bottom: 7px;
+    }
+    .fullsize-img__desc{
+      margin-bottom: 33px;
+      font-size: 13px;
+    }
+  }
+  .rooms-counter-wrapper{
+    margin-bottom: 0px;
+  }
+  .rooms-counter{
+    padding-left: 20px;
+    margin-bottom: 35px;
+    &__num{
+      font-size: 44px;
+      height: 45px;
+    }
+    &__desc{
+      font-size: 15px;
+      line-height: 21px;
+      max-width: 125px;
+      height: 45px;
+    }
+  }
+  .fullsize-img__bottom{
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  //контакты
+  .panorama{
+    margin-bottom: 55px;
+    iframe{
+      height: 330px;
+    }
+  }
+  .contact-content{
+    &__col{
+      float: none;
+      width: 768px;
+      margin: 0 auto;
+      &:first-of-type{
+        margin-bottom: 53px;
+      }
+    }
+    &__text{
+      padding: 0 18px;
+    }
+    &__block{
+      margin-bottom: 58px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+    &__ttl{
+      font-size: 33px;
+      margin-bottom: 40px;
+    }
+    &__div{
+      margin-bottom: 24px;
+    }
+  }
+  .contact-map{
+    #map{
+      height: 500px;
+    }
+  }
+
+  //room
+  .room-content{
+    width: 740px;
+    h2{
+      font-size: 33px;
+    }
+  }
+  .room-slider{
+    margin-bottom: 45px;
+  }
+  .room-slider-button-next,
+  .room-slider-button-prev{
+    display: none;
+  }
+  .room-slider-container {
+    width: 100%;
+  }
+  .room-slider__img{
+    height: 380px;
+  }
+  .room-slider-pagination{
+    text-align: center;
+    margin-top: 17px;
+  }
+  .room-content-prev{
+    margin-bottom: 84px;
+    &__ttl {
+      margin-top: 0;
+      padding-top: 0;
+      height: auto;
+      min-height: auto;
+      margin-bottom: 50px;
+      width: 100%;
+      h1 {
+        font-size: 48px;
+      }
+    }
+    &__desc{
+      margin-bottom: 27px;
+    }
+  }
+  .room-fulldesc{
+    margin-bottom: 69px;
+    h2{
+      margin-bottom: 31px;
+    }
+    &__text{
+      font: 17px/36px "OpenSans";
+      margin-bottom: 0px;
+    }
+    &__left,
+    &__right{
+      padding-right: 0px;
+    }
+    &__right{
+      display: none;
+    }
+    .document{
+      display: none;
+    }
+  }
+  .room-include{
+    margin-bottom: 94px;
+    h2{
+      margin-bottom: 30px;
+    }
+  }
+  .others-rooms{
+    margin-bottom: 16px;
+    h2{
+      margin-bottom: 40px;
+    }
+    &-list{
+      margin: 0 -7px;
+    }
+    .room_size_2{
+      float: left;
+      &:first-of-type{
+        width: 360px;
+        height: 374px;
+      }
+    }
+  }
+
+  //Бронирование
+  .reserv-wrapper{
+    width: 670px;
+    padding-top: 63px;
+  }
+  .reserv-ttl{
+    margin-bottom: 74px;
+    .reserv-minittl{
+      margin-bottom: 19px;
+    }
+    h1{
+      font-size: 48px;
+    }
+  }
+  .reserv-guest-info{
+    width: 320px;
+  }
+  .reserv-info{
+    margin-bottom: 29px;
+    .reserv-minittl{
+      margin-bottom: 25px;
+    }
+  }
+  .reserv-guest{
+    .reserv-minittl{
+      margin-bottom: 28px;
+    }
+  }
+  .reserv-guest-check{
+    padding-left: 24px;
+    width: 310px;
+  }
+  .radioline{
+    margin-bottom: 23px;
+  }
+  .radioline-ttl{
+    width: 126px;
+  }
+  .radioline-radio__item{
+    float: none;
+    margin-bottom: 3px;
+  }
+  .checkline{
+    margin-bottom: 87px;
+  }
+  .captcha{
+    margin-bottom: 25px;
+  }
+
+  //info
+  .withsidebar-wrapper{
+    padding-top: 37px;
+    padding-bottom: 52px;
+  }
+  .left-sidebar{
+    float: none;
+    width: 100%;
+  }
+  .right-content{
+    padding: 0 15px;
+
+    .minittl{
+      padding-left: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  .info-wrapper{
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+  .info-slider{
+    margin-bottom: 42px;
+  }
+  .info-slider__img{
+    img{
+      max-width: 706px;
+    }
+  }
+  .right-content{
+    h1{
+      font-size: 33px;
+      margin-bottom: 42px;
+      padding-left: 20px;
+    }
+  }
+  .info-slider-container{
+    margin-bottom: 13px;
+  }
+  .left-sidebar{
+    .left-menu{
+      display: none;
+    }
+  }
+  .active-link{
+    margin-bottom: 34px;
+    .left-menu__link{
+      padding-left: 17px;
+    }
+  }
+  .noactive-link{
+    .left-menu__link{
+      padding-left: 17px;
+    }
+  }
+  .header-menu__links:hover{
+    margin-left: 0;
+  }
+}

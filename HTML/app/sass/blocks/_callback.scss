@@ -1,0 +1,194 @@
+#callback{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  z-index: 12;
+  overflow-y: auto;
+
+  &__close{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 55px;
+    right: 80px;
+    cursor: pointer;
+    display: block;
+    background: url(images/callback-close.png) no-repeat;
+    &:hover{
+      background-position-y: -21px;
+    }
+  }
+
+  &__overlay{
+    z-index:11;
+    position:fixed;
+    background-color:#23203d;
+    opacity: 0.5;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    cursor:pointer;
+    display:none;
+  }
+}
+.callback-inner{
+  position: relative;
+  width: 539px;
+  height: 879px;
+  margin: 0 auto;
+  background: url(images/callback.png) no-repeat;
+  transition: transform .6s;
+  transform-style: preserve-3d;
+
+}
+#callback.flip{
+  .callback-inner{
+    transform: rotateY( 180deg );
+  }
+}
+.callback-wrapper{
+  position: absolute;
+  top: 262px;
+  left: 80px;
+  width: 360px;
+}
+.callback-form{
+  &__ttl{
+    font: 27px/80px "PlayfairDisplaySC";
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 9px;
+  }
+  &__input{
+    border: 1px solid $c_border_grey;
+    font: 15px/53px "OpenSans";
+    height: 53px;
+    font-style: italic;
+    padding: 0 15px;
+    background-color: $c_form_bg;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 25px;
+    transition: .5s;
+    color: $c_blocks;
+    &:focus{
+      background: $white;
+      border:2px solid $c_form_bg;
+      color: $c_main;
+    }
+  }
+  &__textarea{
+    border: 2px solid $c_form_bg;
+    font: 15px/30px "OpenSans";
+    font-style: italic;
+    padding: 15px;
+    background-color: $c_form_bg;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 165px;
+    transition: .8s;
+    color: $c_blocks;
+    resize: none;
+    &:focus{
+      background: $white;
+      border: 2px solid $c_form_bg;
+      color: $c_main;
+    }
+  }
+  &__submit{
+    background-color: $c_violet;
+    border-radius: 3px;
+    border: none;
+    display: inline-block;
+    color: $white;
+    font: 13px/68px "OpenSans";
+    text-transform: uppercase;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s;
+    &:hover{
+      background-color: $c_button_blue_hover;
+      box-shadow: 10px 17.3px 60px rgba(54, 83, 116, 0.4);
+    }
+  }
+  &__content{
+    margin-bottom: 5px;
+  }
+}
+.callback-message{
+  opacity: 0;
+  transition: opacity .6s;
+  text-align: center;
+  display: none;
+  &__ttl{
+    font: 27px/80px "PlayfairDisplaySC";
+    color: $c_main;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  &__text{
+    font: 17px/30px "OpenSans";
+    font-style: italic;
+    color: $c_main;
+    p{
+      margin-bottom: 30px;
+    }
+  }
+}
+.flip{
+  .callback-form{
+    display: none;
+  }
+  .callback-message{
+    display: block;
+    opacity: 1;
+    transform: rotateY( 180deg );
+  }
+  #callback__close{
+    right: auto;
+    left: 65px;
+  }
+}
+.error-message{
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 18px;
+  color: $error;
+  font: 12px/30px "OpenSans";
+  font-style: italic;
+}
+.checkline{
+  .error-message{
+    bottom: -25px;
+    left: 35px;
+  }
+}
+.reserv-guest-info{
+  .error-message{
+    bottom: 11px;
+  }
+}
+.error{
+  .callback-form__input{
+    background-color: $white;
+    border: 2px solid $error;
+  }
+  .callback-form__textarea{
+    background-color: $white;
+    border: 2px solid $error;
+  }
+  .error-message{
+    display: block;
+  }
+}

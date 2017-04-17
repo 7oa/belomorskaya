@@ -1,0 +1,12 @@
+mixin room(ttl, img, size)
+    .room(class="room_size_"+size)
+        a.room__img(href="room.html")
+            img(src="images/TEMP/"+img)
+        .room__ttl= ttl
+        a.room__hover(href="room.html")
+            .room__hover-ttl= ttl
+            .room__hover-text.
+                52 номера, 1-2 человека<br>
+                1 400 руб. для одного гостя<br>
+                2 800 руб на двоих<br>
+        a.room__hover-link(href="reserv.html") Забронировать

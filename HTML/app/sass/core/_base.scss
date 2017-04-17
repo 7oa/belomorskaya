@@ -1,0 +1,137 @@
+html,
+body {
+  height: 100%;
+  background: url(images/footer-bg.jpg) $white;
+  min-width: 768px;
+}
+.wrapper{
+  font-family: "OpenSans";
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+  &:before{
+    content: "";
+    background: transparent;
+    transition: background .6s;
+  }
+  &.menu-overlay{
+    overflow: hidden;
+    &:before{
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(48,37,126,0.3);
+      z-index: 9;
+    }
+  }
+}
+.container{
+  width: 1260px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: $c_violet;
+}
+input:focus,
+textarea:focus{
+  outline: none;
+}
+textarea{
+  resize: vertical;
+}
+.yellow-bg{
+  background: url(images/yellow-bg.jpg);
+}
+.input,
+.textarea,
+.select{
+  position: relative;
+  .after{
+    position: absolute;
+    top: -3px;
+    left: 15px;
+    color: $c_blocks;
+    font: 12px/30px "OpenSans";
+    font-style: italic;
+  }
+}
+.withsidebar-wrapper{
+  @include clearfix();
+  padding-top: 67px;
+  padding-bottom: 100px;
+}
+.left-sidebar{
+  float: left;
+  width: 327px;
+}
+.right-content{
+  padding-left: 378px;
+
+  h1{
+    font: 44px/44px "PlayfairDisplaySC";
+    font-weight: bold;
+    margin-bottom: 55px;
+  }
+
+  .minittl{
+    margin-bottom: 21px;
+  }
+}
+.left-menu{
+  background: $white;
+  width: 100%;
+  border: 2px solid $c_form_bg;
+  border-radius: 3px;
+
+  &__item{
+    &:first-of-type {
+      .active {
+        border-top: 0;
+      }
+    }
+    &:last-of-type {
+      .active {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    font: 13px/66px "OpenSans";
+    color: $c_blocks;
+    padding-left: 45px;
+    text-transform: uppercase;
+    display: block;
+    transition: .5s;
+    &:hover{
+      color: $c_orange;
+    }
+    &.active {
+      background: $c_orange;
+      color: $white;
+      border-bottom: 2px solid $c_form_bg;
+      border-top: 2px solid $c_form_bg;
+      &:hover{
+        color: $white;
+      }
+    }
+  }
+}
+.minittl{
+  font: 13px/22px "OpenSans";
+  text-transform: uppercase;
+}
+.docs__item{
+  margin-bottom: 10px;
+}
+.content-prev{
+  margin-bottom: 20px;
+}

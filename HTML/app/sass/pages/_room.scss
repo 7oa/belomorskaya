@@ -1,0 +1,142 @@
+.room-slider{
+	position: relative;
+}
+.room-slider-container{
+  overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.room-slider__img{
+  height: 780px;
+}
+.room-slider-pagination{
+  text-align: right;
+  margin-top: 20px;
+}
+.next.room-slider-button-next{
+  top: 40%;
+  right: 10px;
+}
+.prev.room-slider-button-prev{
+  top: 40%;
+  left: 10px;
+}
+.room-content {
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  h2{
+	font: 44px/30px "PlayfairDisplaySC";
+	font-weight: bold;
+  }
+  b{
+	font-weight: bold;
+  }
+}
+.room-content-prev{
+  margin-bottom: 148px;
+  &__ttl {
+	margin-top: -184px;
+	margin-left: -120px;
+	background: url(images/footer-bg.jpg) $white;
+	z-index: 20;
+	min-height: 198px;
+	height: auto;
+	width: 950px;
+	box-sizing: border-box;
+	padding-top: 109px;
+	padding-left: 120px;
+	border-radius: 3px 3px 0 0;
+	h1 {
+	  font: 60px/60px "PlayfairDisplaySC";
+	  font-weight: bold;
+	}
+  }
+  &__desc{
+	font: 17px/36px "OpenSans";
+	margin-bottom: 35px;
+  }
+}
+.room-fulldesc{
+  margin-bottom: 129px;
+  h2{
+	margin-bottom: 66px;
+  }
+  &__text{
+	font: 17px/36px "OpenSans";
+	margin-bottom: 49px;
+  }
+  &__left,
+  &__right{
+	padding-right: 70px;
+  }
+}
+.document{
+  background: url(images/doc.png) no-repeat;
+  height: 40px;
+  font: 15px/40px "OpenSans";
+  font-style: italic;
+  padding-left: 48px;
+  display: inline-block;
+}
+.room-include{
+  margin-bottom: 135px;
+  font: 17px/60px "OpenSans";
+  h2{
+	margin-bottom: 54px;
+  }
+  &__item{
+	background-repeat: no-repeat;
+	background-size: 37px;
+	background-position: center left;
+	padding-left: 47px;
+	&.i1{
+	  background-position: 0 -362px;
+	}
+	&.i2{
+	  background-position: 0 -95px;
+	}
+	&.i3{
+	  background-position: 0 -520px;
+	}
+	&.i4{
+	  background-position: 0 -680px;
+	}
+	&.i5{
+	  background-position: 0 -255px;
+	}
+	&.i6{
+	  background-position: 0 -630px;
+	}
+	&.i7{
+	  background-position: 0 -306px;
+	}
+	&.i8{
+	  background-position: 0 -46px;
+	}
+	&.i9{
+	  background-position: 0 10px;
+	}
+	&.i10{
+	  background-position: 0 -572px;
+	}
+	&.i11{
+	  background-position: 0 -464px;
+	}
+  }
+
+}
+.others-rooms{
+  margin-bottom: 35px;
+  h2{
+	text-align: center;
+	margin-bottom: 77px;
+  }
+}
+.others-rooms-list{
+  @include clearfix();
+
+  margin: 0 -17px;
+}

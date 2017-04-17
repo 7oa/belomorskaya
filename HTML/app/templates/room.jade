@@ -1,0 +1,106 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Номера';
+
+block title
+    title Номер
+
+block content
+    //workarea
+    .workarea
+        //room-slider
+        .room-slider
+            .room-slider-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .room-slider__img(style="background:url(images/hotel-bg.jpg) no-repeat top center; background-size:cover;")
+                    .swiper-slide
+                        .room-slider__img(style="background:url(images/hotel-bg.jpg) no-repeat top center; background-size:cover;")
+                    .swiper-slide
+                        .room-slider__img(style="background:url(images/hotel-bg.jpg) no-repeat top center; background-size:cover;")
+                .room-slider-pagination
+            .next.room-slider-button-next
+            .prev.room-slider-button-prev
+        //end room-slider
+
+        //room-content
+        .room-content
+            .room-content-prev
+                .room-content-prev__ttl
+                    h1 Люкс улучшенный
+                .room-content-prev__desc.
+                    1 номер, 1-2 человек, 2 комнаты<br>
+                    4 400 руб. для одного гостя<br>
+                    5 100 руб. для двоих
+                a.button-reserv(href="#") Забронировать
+
+            //room-fulldesc
+            .room-fulldesc
+                h2 Описание
+                .room-fulldesc__text
+                    .row
+                        .col-lg-6.col-xs-12
+                            .room-fulldesc__left.
+                                11 номеров категории «Люкс» гостиницы Беломорская имеют увеличенную площадь от 26 квадратных метров, что позволяет Гостю с комфортом расположиться в уютном помещении номера. Зона отдыха с диваном и креслами спланирована так, чтобы каждый Гость мог с удовольствием отдохнуть после насыщенного дня и даже принимать посетителей.
+                        .col-lg-6
+                            .room-fulldesc__right.
+                                Каждый номер оборудован мини-баром и чай/кофе сетом. В любое время суток Гостям отеля доступен круглосуточный консьерж-сервис и бесплатный Wi-Fi. Окна номеров категории «Люкс» открывают вид на тихий двор.
+
+                a.document(href="#") Прикрепленный документ к номеру отеля
+            //end room-fulldesc
+
+            // room-include
+            .room-include
+                h2 Что входит
+                .row
+                    .col-xs-6
+                        ul.room-include__list
+                            li.room-include__item(style="background-image: url('images/TEMP/i7.png')") кровать 160х200, двуспальная
+                            li.room-include__item(style="background-image: url('images/TEMP/i10.png')") телевизор
+                            li.room-include__item(style="background-image: url('images/TEMP/i8.png')") телефон
+                            li.room-include__item(style="background-image: url('images/TEMP/i14.png')") холодильник
+                            li.room-include__item(style="background-image: url('images/TEMP/i13.png')") туалетные принадлежности
+                            li.room-include__item(style="background-image: url('images/TEMP/i11.png')") зубной набор и набор для бритья
+                    .col-xs-6
+                        ul.room-include__list
+                            li.room-include__item(style="background-image: url('images/TEMP/i2.png')") фен
+                            li.room-include__item(style="background-image: url('images/TEMP/i5.png')") тапочки
+                            li.room-include__item(style="background-image: url('images/TEMP/i4.png')") халат
+                            li.room-include__item(style="background-image: url('images/TEMP/i9.png')") душ
+                            li.room-include__item(style="background-image: url('images/TEMP/i1.png')") 2 кровати 90х200, одноместные
+            //end room-include
+
+            //others-rooms
+            .others-rooms
+                h2 Другие номера
+
+                .others-rooms-list
+                    +room("Полулюкс", "room-3.jpg", "2")
+                    +room("Люкс стандарт", "room-4.jpg", "2")
+                    +room("Двухместный", "room-4.jpg", "2")
+
+            // end other-rooms
+        //end room-content
+
+        //map
+        .yandex-map-wrapper
+            #map
+            .container
+                .map-label
+                    .map-label__content
+                        .map-label__ttl Контакты
+                        .map-label__items
+                            .map-label__item.map-label__item_point 163 000, Росcия<br>г. Архангельск, ул. Тимме, д.3
+                            .map-label__item.map-label__item_tel
+                                a(href="tel:8182661600") (8182) 66-16-00<br/>
+                                a(href="tel:8182661434") 66-14-34
+                            .map-label__item.map-label__item_mail
+                                a(href="mailto:belhotel@list.ru") belhotel@list.ru
+                    .map-label__button-wrapper
+                        a(class="button-call-request js-open-callback" href="#callback") Заказать звонок
+        //end map
+        //map script
+        include blocks/_map
+        //end map script
+    //end workarea

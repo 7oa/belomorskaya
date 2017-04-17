@@ -1,0 +1,135 @@
+.reserv-wrapper{
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 73px;
+}
+.reserv-minittl{
+  font: 13px/13px "OpenSans";
+  text-transform: uppercase;
+  text-align: center;
+}
+.reserv-ttl{
+  margin-bottom: 90px;
+  text-align: center;
+  .reserv-minittl{
+	margin-bottom: 22px;
+  }
+  h1{
+	font: 60px/30px "PlayfairDisplaySC";
+	font-weight: bold;
+  }
+}
+.reserv-info{
+  margin-bottom: 50px;
+  .reserv-minittl{
+	margin-bottom: 45px;
+  }
+  &-wrapper{
+	margin: 0 -15px;
+  }
+}
+.reserv-guest{
+  margin-bottom: 30px;
+  .reserv-minittl{
+	margin-bottom: 48px;
+  }
+}
+.reserv-select-date{
+  background-color: $white;
+  border: 2px solid $c_form_bg;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px 0 22px;
+  margin: 0 15px 30px;
+  position: relative;
+}
+.select-guest-wrapper__sum{
+  color: $c_orange;
+  font-size: 80px;
+  font-family: "PlayfairDisplaySC";
+  line-height: 55px;
+}
+.reserv-guest-info{
+  width: 470px;
+  .callback-form__input{
+    margin-bottom: 35px;
+  }
+}
+.reserv-guest-check{
+  padding-left: 39px;
+  width: 470px;
+  padding-top: 14px;
+}
+.radioline{
+  @include clearfix();
+  margin-bottom: 60px;
+  &-ttl{
+    float: left;
+    width: 135px;
+    font: 15px/30px "OpenSans";
+    font-style: italic;
+    color: $c_blocks;
+  }
+  &-radio{
+    float: left;
+  }
+}
+.checkline{
+  font: 15px/30px "OpenSans";
+  font-style: italic;
+  color: $c_blocks;
+  margin-bottom: 47px;
+  position: relative;
+}
+.radioline-radio__item{
+  float: left;
+  width: 140px;
+  font: 15px/30px "OpenSans";
+  font-style: italic;
+  color: $c_blocks;
+}
+.captcha{
+  margin-bottom: 39px;
+  img{
+    max-width: 100%;
+  }
+}
+.workarea{
+  input[type="checkbox"],
+  input[type="radio"] {
+    display:none;
+
+    &+label{
+      cursor: pointer;
+      position: relative;
+      padding-left: 35px;
+
+      &::before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(images/input-sprite.png) no-repeat;
+        position: absolute;
+        top: 1px;
+        left: 0;
+      }
+    }
+  }
+
+  input[type="checkbox"] + label::before {
+    background-position: 0px -20px;
+  }
+  input[type="radio"] + label::before {
+    background-position: 0 0;
+  }
+  input[type="checkbox"]:checked + label::before {
+    background-position: -20px -20px;
+  }
+  input[type="radio"]:checked + label{
+    color: $c-violet;
+  }
+  input[type="radio"]:checked + label::before {
+    background-position: -20px 0px;
+  }
+}
