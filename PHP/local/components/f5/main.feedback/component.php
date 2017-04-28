@@ -57,7 +57,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 			else
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
 
-		}			
+		}
+		//recaptcha
+		$recaptcha = new \ReCaptcha\ReCaptcha(RE_SEC_KEY);
+		$resp = $recaptcha->verify($_REQUEST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+		if (!$resp->isSuccess()){
+			foreach ($resp->getErrorCodes() as $code) {
+				$arResult["ERROR_MESSAGE"][] = "Ошибка! Проверка не пройдена.";
+				$arResult["RECAP"] = "Вы не прошли проверку reCAPTCHA.";
+			}
+		}
 		if(empty($arResult["ERROR_MESSAGE"]))
 		{
 			$arFields = Array(

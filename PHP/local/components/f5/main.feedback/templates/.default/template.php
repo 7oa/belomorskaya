@@ -27,17 +27,24 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
         <div class="callback-form__ttl">Заказать звонок</div>
         <div class="callback-form__content">
             <div class="input">
-                <input type="text" placeholder="Ваше имя" name="user_name" class="callback-form__input" data-req="y" value="<?=$arResult["AUTHOR_NAME"]?>">
+                <input type="text" placeholder="Ваше имя" name="user_name" class="callback-form__input" style="margin-bottom: 20px;" data-req="y" value="<?=$arResult["AUTHOR_NAME"]?>">
             </div>
             <div class="input">
-                <input type="text" placeholder="Телефон" name="user_tell" class="callback-form__input" data-req="y" value="<?=$arResult["AUTHOR_TELL"]?>">
+                <input type="text" placeholder="Телефон" name="user_tell" class="callback-form__input" style="margin-bottom: 20px;" data-req="y" value="<?=$arResult["AUTHOR_TELL"]?>">
             </div>
             <div class="textarea">
-                <textarea placeholder="Комментарий" name="MESSAGE" class="callback-form__textarea"><?=$arResult["MESSAGE"]?></textarea>
+                <textarea placeholder="Комментарий" name="MESSAGE" class="callback-form__textarea" style="height: 130px; margin-bottom: 20px;"><?=$arResult["MESSAGE"]?></textarea>
+            </div>
+            <div class="captcha" style="margin-bottom: 20px;">
+                <div class="g-recaptcha" id="f-callback" data-sitekey="<?=RE_SITE_KEY?>"></div>
+                <?if($arResult["RECAP"]!=""):?>
+                    <div class="error-message"><?=$arResult["RECAP"]?></div>
+                <?endif;?>
             </div>
             <div class="input-submit">
                 <input type="submit" name="submit" value="Отправить" class="callback-form__submit js-callback-submit">
             </div>
+
         </div>
     </form>
     <div class="callback-message">

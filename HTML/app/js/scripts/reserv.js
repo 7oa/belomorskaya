@@ -9,16 +9,21 @@ $(document).ready(function() {
 		var minutes = seconds / 60;
 		var hours = minutes / 60;
 		var days = hours / 24;
-		days++;
 		if(days<0) days = 1;
 
 		var rCount = $("#r-count").val();
-		var rPep = $("#r-pep").val();
-		var rPepCost1 = $("#r-pep").data("cost1");
-		var rPepCost2 = $("#r-pep").data("cost2");
-		var rKids = $("#r-kids").val();
-		var rKidsCost = $("#r-kids").data("cost");
-		var sum = days*rCount*((rPep*rPepCost1)+(rKids*rKidsCost));
+		var rPep = $("#r-pep").val(); //кол-во взрослых
+		var rPepCost1 = $("#r-pep").data("cost1"); //цена за 1
+		var rPepCost2 = $("#r-pep").data("cost2"); //цена за 2
+		var rKids = $("#r-kids").val(); //кол-во детей
+		var rKidsCost = $("#r-kids").data("cost"); //цена за ребенка
+		var sum;
+		if (rPepCost2) {
+			var two = Math.floor(rPep/2); //кол-во пар
+			var one = rPep%2; // кол-во одиночек
+			sum = days*rCount*((one*rPepCost1)+(two*rPepCost2)+(rKids*rKidsCost));
+		}
+		else sum = days*rCount*((rPep*rPepCost1)+(rKids*rKidsCost));
 		var sumF = number_format(sum, 0, '', ' ');
 		$("#r-sum").val(sum)
 			.prev().text(sumF);

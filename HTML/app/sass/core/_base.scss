@@ -130,8 +130,23 @@ textarea{
   text-transform: uppercase;
 }
 .docs__item{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .content-prev{
   margin-bottom: 20px;
+}
+.page404{
+  padding:80px 0;
+  text-align: center;
+  h1{
+    font: 60px/60px PlayfairDisplaySC;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  .page404-content{
+    font: 17px/36px OpenSans;
+  }
+}
+.inner-page{
+  padding-bottom: 200px;
 }

@@ -1,6 +1,8 @@
 <?
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
+$curDir = $APPLICATION->GetCurDir();
+$curPage = $APPLICATION->GetCurPage(true);
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,4 +82,4 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </header>
         <!--end header-->
         <!--workarea-->
-        <div class="workarea">
+        <div class="workarea<?if(!preg_match('#^/rooms/.?#',$curDir) && $curPage != "/index.php" && $curDir != "/contacts/"):?> inner-page<?endif;?>">

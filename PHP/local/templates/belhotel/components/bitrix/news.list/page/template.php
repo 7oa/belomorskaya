@@ -53,7 +53,7 @@ $this->setFrameMode(true);
         <div class="docs">
             <?foreach ($arItem["DISPLAY_PROPERTIES"]["FILE"]["FILE_VALUE"] as $arFile):?>
             <div class="docs__item">
-                <a href="<?=$arFile["SRC"]?>" class="document"><?=$arFile["ORIGINAL_NAME"]?></a>
+                <a href="<?=$arFile["SRC"]?>" class="document" target="_blank"><?=$arFile["ORIGINAL_NAME"]?></a>
             </div>
             <?endforeach;?>
         </div>

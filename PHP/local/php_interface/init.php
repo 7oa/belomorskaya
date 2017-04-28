@@ -6,5 +6,5 @@ function prnt($data){
 }
 
 @require_once 'include/autoload.php';
-define("RE_SITE_KEY","6LdgEx0UAAAAANOnL5SvK6pQ0XWfoqJlbEUhw7Kl");
-define("RE_SEC_KEY","6LdgEx0UAAAAACceSjgn5STCepqI15c2UlmxiQtW");
+define("RE_SITE_KEY","6Lcr7R0UAAAAADBL4VWys1aToj-I1IwMFKR8WWb8");
+define("RE_SEC_KEY","6Lcr7R0UAAAAAElmNzCFcgc6DZPdnac4SaDiCGOb");

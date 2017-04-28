@@ -79,28 +79,12 @@ $(document).ready(function() {
     focusForm("input");
     focusForm("textarea");
 
-    //submit
-    $(".js-callback-submit").click(function () {
-        /*переворачивание блока
-        $("#callback").addClass("flip");
-        return false;*/
-		var error = false;
-        $(this).parent().parent().find('.input, .textarea').each(function () {
-			if (($(this).children().val() == '') && ($(this).children().data("req") == 'y')) {
-				if(!$(this).hasClass("error")){
-					$(this).addClass("error")
-						.append('<div class="error-message">Это обязательное поле</div>');
-				}
-				error = true;
-			}
-		});
-		if (error) return false;
-    });
-
     //menu-open
     $(".js-menu").click(function () {
         $(this).toggleClass("drop");
         $(".content").toggleClass("menu-overlay");
         $(".header-menu-wrapper").slideToggle();
     });
+
+
 });

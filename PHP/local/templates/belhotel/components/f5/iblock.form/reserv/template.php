@@ -152,7 +152,7 @@
 									);?></label>
                             </div>
                             <div class="captcha">
-                                <div class="g-recaptcha" data-sitekey="<?=RE_SITE_KEY?>"></div>
+                                <div class="g-recaptcha" id="f-reserv" data-sitekey="<?=RE_SITE_KEY?>"></div>
                             </div>
                             <input type="submit" name="<?=$arResult["FORM"]["SUBMIT_INPUT_NAME"]?>" value="Забронировать" class="button-reserv button-reserv_wide js-reserv-subm">
                         </div>

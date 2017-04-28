@@ -54,13 +54,13 @@
 }
 .callback-wrapper{
   position: absolute;
-  top: 262px;
+  top: 255px;
   left: 80px;
   width: 360px;
 }
 .callback-form{
   &__ttl{
-    font: 27px/80px "PlayfairDisplaySC";
+    font: 27px/50px "PlayfairDisplaySC";
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 9px;
@@ -190,5 +190,11 @@
   }
   .error-message{
     display: block;
+  }
+}
+.captcha{
+  .error-message{
+    display: block;
+    bottom: -23px;
   }
 }

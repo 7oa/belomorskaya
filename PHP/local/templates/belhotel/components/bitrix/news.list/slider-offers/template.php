@@ -30,7 +30,7 @@ $this->setFrameMode(true);
                                 </div>
                                 <div class="col-lg-6 col-xs-12">
                                     <div class="special-offers-swiper-container__content">
-                                        <div class="special-offers-swiper-container__ttl"><?=$arItem["NAME"]?></div>
+                                        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="special-offers-swiper-container__ttl"><?=$arItem["NAME"]?></a>
                                         <div class="special-offers-swiper-container__text">
 											<?=$arItem["PREVIEW_TEXT"]?>
                                         </div>

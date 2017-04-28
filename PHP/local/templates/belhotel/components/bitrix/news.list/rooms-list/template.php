@@ -21,23 +21,23 @@ $this->setFrameMode(true);
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             $reserv = "/reserv-".$arItem['CODE']."/";
             switch ($key) {
-                case 0:
-                case 5:
+                case 1:
+                case 3:
                     echo "<div class=\"room-wrapper room-wrapper-size1\">";
                     $cl = 1;
                     break;
-                case 1:
-                case 6:
+                case 2:
+                case 4:
                     $cl = 1;
                     break;
-                case 2:
+                case 5:
                     echo "<div class=\"room-wrapper room-wrapper-size2\">";
                     $cl = 2;
                     break;
-                case 3:
+                case 6:
                     $cl = 2;
                     break;
-                case 4:
+                case 0:
                     echo "<div class=\"room-wrapper room-wrapper-size4\">";
                     $cl = 4;
                     break;
@@ -54,7 +54,7 @@ $this->setFrameMode(true);
                     </a>
                     <a href="<?=$reserv?>" class="room__hover-link">Забронировать</a>
                 </div>
-            <?if($key==1 || $key==3 || $key==4 || $key==6):?>
+            <?if($key==0 || $key==2 || $key==4 || $key==6):?>
                 </div>
             <?endif;?>
         <?endforeach;?>

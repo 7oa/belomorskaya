@@ -122,5 +122,53 @@ $curPage = $APPLICATION->GetCurPage(true);
 <!--end footer-->
 </div>
 <!--end wrapper-->
+<!--recaptcha-->
+<!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script type="text/javascript">
+	var onloadCallback = function() {
+		grecaptcha.render('f-callback', {
+			'sitekey' : '<?=RE_SITE_KEY?>',
+		});
+		grecaptcha.render('f-reserv', {
+			'sitekey' : '<?=RE_SITE_KEY?>',
+		});
+	};
+</script>
+<!--end recaptcha-->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter44332513 = new Ya.Metrika({
+					id:44332513,
+					clickmap:true,
+					trackLinks:true,
+					accurateTrackBounce:true,
+					webvisor:true
+				});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44332513" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+	(function(){ var widget_id = 'cbYn1zr9P4';var d=document;var w=window;function l(){
+		var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>
